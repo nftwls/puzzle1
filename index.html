@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" href="img/solana.png">
+    <link rel="stylesheet" href="css/main.css?v=7">
+    <link rel="stylesheet" href="css/solana.css?v=9">
+    <title>Sol Puzzle</title>
+</head>
+<body>
+    <div id="app">
+        <div class="block1">
+            <div class="container">
+                <nav >
+                    <div class="between">
+                        <a class="nav-link acenter" href="#">
+                            <img src="img/solana.png" class="icon">
+                            <span class="name">Sol Puzzle</span>
+                        </a>
+                        <div class="between hrefs acenter">
+                            <a href="#about" class="nav-link">About</a>
+                            <a href="#shcs" class="nav-link">Showcase</a>
+                            <a href="#roadMap" class="nav-link">Roadmap</a>
+                            <a href="#FAQ" class="nav-link">Faq</a>
+                        </div>
+                        <div class="contact">
+                            
+                            <a href="https://x.com/solprojetpuzzle" target="_blank"><img src="./img/twiter.png" alt=""></a>
+                        </div>
+                    </div>
+                </nav>
+                <div class="flex disp">
+                    <div class="about">
+                        <div class="bl1">
+                            Welcome<br>
+                            to Sol Puzzle
+                        </div>
+                        <div class="bl2">
+                            Discover and collect unique pieces of digital art
+                            Complete puzzles and unlock amazing rewards on the Solana network
+                            Join the Sol Puzzle adventure today!
+                        </div>
+                        <div class="bl3">
+                            
+                            <a href="https://x.com/solprojetpuzzle" target="_blank"><img src="./img/twiter.png" class="tw" alt=""></a>
+                        </div>
+                    </div>
+                    <div class="show">
+                        <img src="img/circle.png" alt="" class="circle">
+                        <img :src="picName" alt="" class="sneakPic">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="block2" id="about">
+            <div class="container">
+                <div class="center coming">
+                    <a href="https://launchmynft.io/sol/5483" target="_blank"></a><img src="./img/coming.png" alt="" id="toMint">
+                </div>
+                <div class="center">
+                    <div class="between timer" id="timer">
+                        <div >
+                            <div class="box">{{d}}</div>
+                            <div class="desc">Days</div>
+                        </div>
+                        <div>
+                            <div class="box">{{h}}</div>
+                            <div class="desc">Hours</div>
+                        </div>
+                        <div>
+                            <div class="box">{{m}}</div>
+                            <div class="desc">Minutes</div>
+                        </div>
+                        <div>
+                            <div class="box">{{s}}</div>
+                            <div class="desc">Seconds</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="text text1">
+                    Explore the magic of Sol Puzzle, where each piece is a unique work of digital art on the Solana network.<br>
+                    Collect, trade and complete challenging puzzles, each meticulously designed and assembled to give you an unparalleled NFT experience. <br>
+                    Become a puzzle master and unlock amazing rewards!<br>
+                </div>
+                <div class="text text2">
+                    This is just the beginning.<br>
+                    Get ready for more, because in the next stages of the project, two new exciting puzzles will join the collection.<br>
+                    Each will bring its own challenge and unique rewards.
+                </div>
+            </div>
+        </div>
+        <div class="block3">
+            <div class="benefits" :style="{left:scroll+'px'}">
+                <div class="benefit">
+                    <div class="name">16</div>
+                    <div class="dis">In this first stage, there are 16 NFT pieces to assemble the first puzzle</div>
+                </div>
+                <div class="benefit">
+                    <div class="name">100</div>
+                    <div class="dis">2 $SOL in rewards for those who manage to complete the 100 puzzles awarded in the first stage</div>
+                </div>
+                <div class="benefit">
+                    <div class="name">0.05 $SOL</div>
+                    <div class="dis">Minting price is 0.05 $SOL. Cost of the complete puzzle = 0.8 $SOL</div>
+                </div>
+                <div class="benefit">
+                    <div class="name">Listing</div>
+                    <div class="dis">After minting Sol Puzzle will be tradable on the secondary marketplaces</div>
+                </div>
+                <div class="benefit">
+                    <div class="name">Exclusive</div>
+                    <div class="dis">Exclusive access and rewards are available only to holders</div>
+                </div>
+                
+                <div class="benefit">
+                    <div class="name">5%</div>
+                    <div class="dis">5% of the income from public sales will also be distributed among the 100 wallets that complete the puzzle.</div>
+                </div>
+            </div>
+            <div class="container" id="showcase">
+                <div class="title showcase" >Showcase <span id="shcs"></span></div>
+                <div class="btns">
+                    <img src="./img/left.png" alt="" class="btn" @tab="prev" @click="prev">
+                    <img src="./img/right.png" alt="" class="btn" @tab="next" @click="next">
+                </div>
+            </div>
+            <div class="carousel between">
+                <div><img src="./img/left.png" alt="" class="btn" @click="prev"></div>
+                <div class="between imgs">
+                    <img v-for="i in pics" :src="`./img/${i}.png`">
+                </div>
+                <div><img src="./img/right.png" alt="" class="btn" @click="next"></div>
+            </div>
+        </div>
+        <div class="block4">
+            <div class="container">
+                <div id="roadMap" class="title">Roadmap</div>
+            </div>
+            <div class="box box1"> Q1 <br>
+                                  º Development of the project idea.<br>
+                                  º Planning and strategy.<br>
+                                  º Beginning of the development of the Sol Puzzle platform.<br>
+                                  º Creation of the NFT idea and content.</div>
+            <div class="box box2"> Q2 <br>
+                                  º Marketing campaigns on social networks.<br>
+                                  º Launch of the genesis version of Sol Puzzle at https://launchmynft.io<br>
+                                 
+                                  
+                                  </div>
+            <div class="box box3">Q3 <br>
+                º Official release and expansion.<br>
+                º Grand official launch event for Sol Puzzle dApp.<br>
+                º Listed on MAGIC EDEN. <br>
+                º Preparation and official launch of the mobile application.<br>
+                º Mobile dApp development and initial testing.<br>
+                </div>
+            <div class="box box4">Q4 <br>
+                º Continuous Improvements and Events.<br>
+                º Preparation and official launch of the mobile application.<br>
+                º Beginning of the exchange of completed puzzles for $SOL on the web and mobile dApp. <br>
+                º Introduction of new NFT puzzles for the second phase.<br>
+                º Community events and special rewards programs.<br>
+                º Security and scalability updates.<br>
+                º End of quarter event to thank the community and announce future plans.
+            </div>
+            
+        </div>
+        
+        <div class="block6">
+            <div class="container">
+                <div id="FAQ" class="title">FAQ</div>
+                <div class="cards">
+                    <div class="card" @click="open(0)">
+                        <div>
+                            <div class="quest">How many puzzle pieces are there in stage 1?</div>
+                            <div class="ans" v-if="faq==0" >There will be 7,490 NFTs in total, to complete the first stage puzzle</div>
+                        </div>
+                        <div ><img src="./img/down.png" alt="" :class="{open:faq==0}"></div>
+                    </div>
+                    <div class="card" @click="open(1)">
+                        <div>
+                            <div class="quest">What’s the minting cost?</div>
+                            <div class="ans" v-if="faq==1">The minting cost is 0.05 SOL</div>
+                        </div>
+                        <div ><img src="./img/down.png" alt="" :class="{open:faq==1}"></div>
+                    </div>
+                    <div class="card" @click="open(2)">
+                        <div>
+                            <div class="quest">When is the launch date planned? </div>
+                            <div class="ans" v-if="faq==2">The launch date is scheduled for 2024.06.06 8 pm UTC</div>
+                        </div>
+                        <div ><img src="./img/down.png" alt="" :class="{open:faq==2}"></div>
+                    </div>
+                    <div class="card" @click="open(3)">
+                        <div>
+                            <div class="quest">Will it be possible to get more than 0.05 $SOL in Sol Puzzle?</div>
+                            <div class="ans" v-if="faq==3">Not only 0.05 $SOL, just for completing the puzzle you will get 2$SOL and automatic entry to the whitelist of stages 2 and 3 that will have rewards of 4 and 8 $SOL respectively.</div>
+                        </div>
+                        <div ><img src="./img/down.png" alt="" :class="{open:faq==3}"></div>
+                    </div>
+                    <div class="card" @click="open(4)">
+                        <div>
+                            <div class="quest">Which wallet will be available?</div>
+                            <div class="ans" v-if="faq==4">You will be able to mint Sol Puzzle with the help of Phantom, we recommend this particular wallet.</div>
+                        </div>
+                        <div ><img src="./img/down.png" alt="" :class="{open:faq==4}"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="block7" :style='{"background-image":`url(${back})`}'>
+            <div class="text" >
+                <a @mouseover="back2" @mouseleave="back1" href="https://x.com/solprojetpuzzle" target="_blank">
+                    Sol Puzzle
+                </a>
+               
+            </div>
+            <div class="container">
+               
+                </div>
+                <div class="end">© 2024 Sol Puzzle is Proudly Powered by Solana.</div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/vue.min.js"></script>
+    <script src="js/main-dist.js?v=6"></script>
+
+</body>
+
+</html>
